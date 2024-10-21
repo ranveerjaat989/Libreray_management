@@ -1,0 +1,122 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+:root{
+  --navBarHeight:51px;
+  --sideBarWidth:270px;
+}
+/* Nav Bar Start */
+.navbar{
+  padding-top:2px ;
+  padding-bottom:2px;
+}
+.search-bar{
+  background-color: white;
+}
+.nav-item{
+  display: flex;
+  align-items: center;
+}
+.navbar-nav{
+  display: flex;
+  width: auto;
+}
+.nav-item img{
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.search-inp{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.search-btn{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+@media (max-width:992px){
+  .ul-ug{
+    display: inline-block;
+    /* position: fixed; */
+    width: 100%;
+  }
+  .ul-ug ul{
+    width: 100%;
+  }
+}
+/* Nav Bar End */
+
+/* Side Bar Start*/
+.sidebar-nav{
+  width: var(--sideBarWidth) !important;
+  padding: 10px;
+
+}
+.ul{
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.ul .dropdown {
+  display: grid;
+ 
+  grid-template-rows: auto;
+  grid-template-columns:auto;
+
+}
+.ul .dropdown span {
+  padding: 3px 0px 0px 0px;
+}
+.sidebar-link .right-icon{
+  transition: all 0.3s;
+}
+.sidebar-link[aria-expanded="true"] .right-icon{
+  transform: rotate(180deg);
+}
+
+
+
+@media (min-width:992px){
+  .offcanvas-backdrop{
+    display: none !important;
+  }
+  .sidebar-nav {
+    transform: none !important;
+    visibility: visible !important;
+    top: var(--navBarHeight) !important;
+  }
+
+  main{
+    margin-left: var(--sideBarWidth);
+  }
+}
+
+/* Side Bar End */
+@media(max-width:754px){
+  .daskbord-count .card{
+    margin-bottom:20px;
+  }
+  .daskbord-tabs .nav-item .nav-link{
+    padding-left: 4px;
+    padding-right: 8px;
+    font-size: 17px;
+  }
+}
+@media (max-width:500px){
+  .daskbord-tabs .nav-item .nav-link{
+    padding-left: 4px;
+    padding-right: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width:460px){
+  .daskbord-tabs .nav-item .nav-link{
+    padding-left: 4px;
+    padding-right: 8px;
+    font-size: 11px;
+  }
+}
